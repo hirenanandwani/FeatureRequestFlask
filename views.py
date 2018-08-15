@@ -1,4 +1,4 @@
-from flaskdemo1 import app,db
+from flaskapp import app,db
 from flask import Flask, request, jsonify
 from flask_sqlalchemy import SQLAlchemy
 from flask import render_template

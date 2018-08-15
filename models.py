@@ -1,4 +1,4 @@
-from flaskdemo1 import db
+from flaskapp import db
 
 class Features(db.Model):
 
