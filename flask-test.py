@@ -1,4 +1,4 @@
-from flaskdemo1 import app
+from flaskapp import app
 import unittest
 import json
 from flask import request, jsonify
