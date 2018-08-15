@@ -12,5 +12,5 @@ source flaskenv/bin/activate
 
 pip install Flask
 sudo apt-get install python-flask-sqlalchemy
-sqlite3 features.db
+#sqlite3 features.db
 
