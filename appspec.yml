@@ -1,0 +1,14 @@
+version: 0.0
+os: linux
+files:
+   - source: /
+     destination: flask-application
+hooks:
+   BeforeInstall:
+    - location: scripts/installflask.sh
+      runas: root
+    - location: scripts/startflask.sh
+      runas: root
+   AfterInstall:
+    - location: scripts/restartflask.sh
+runas: root
