@@ -2,7 +2,12 @@ version: 0.0
 os: linux
 files:
    - source: /
-     destination: /var/flaskapp
+     destination: /home/ubuntu/
+permissions:
+  - object: /home/ubuntu/
+    owner: root
+    group: root
+    mode: 777
 hooks:
    BeforeInstall:
     - location: scripts/installflask.sh
