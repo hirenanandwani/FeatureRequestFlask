@@ -2,9 +2,9 @@ version: 0.0
 os: linux
 files:
    - source: /
-     destination: /opt/codedeploy-agent
+     destination: /home/ubuntu/flaskapp
 permissions:
-   - object: /opt/codedeploy-agent
+   - object: /home/ubuntu/flaskapp
      pattern: "**"
      owner: root
      group: root
@@ -15,8 +15,8 @@ hooks:
    BeforeInstall:
     - location: scripts/installflask.sh
       runas: root
+   AfterInstall:
     - location: scripts/startflask.sh
       runas: root
-   AfterInstall:
     - location: scripts/restartflask.sh
       runas: root
