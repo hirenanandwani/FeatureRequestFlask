@@ -4,8 +4,8 @@ yes | sudo apt-get update
 yes | sudo apt-get install python-virtualenv 
 yes | sudo apt-get install python-pip
 
-mkdir flask-application
-cd flask-application
+#mkdir flask-application
+#cd flask-application
 virtualenv flaskenv
 
 source flaskenv/bin/activate
