@@ -8,6 +8,10 @@ yes | sudo apt-get install python-pip
 #cd flask-application
 virtualenv flaskenv
 
+pwd
+pwd
+
+
 source flaskenv/bin/activate
 
 yes | pip install Flask
