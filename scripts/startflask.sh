@@ -5,4 +5,7 @@
 cd /home/ubuntu/flaskapp
 #python flaskapp.py
 
-sudo service flask status
+nohup python flaskapp.py
+
+
+#sudo service flask status
