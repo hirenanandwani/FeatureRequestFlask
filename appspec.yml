@@ -10,7 +10,7 @@ permissions:
      group: root
      mode: 755
      type:
-- file
+       - file
 hooks:
    BeforeInstall:
     - location: scripts/installflask.sh
