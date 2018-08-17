@@ -1,3 +1,4 @@
 #!/bin/bash
 
-touch flaskapp.py
+#touch flaskapp.py
+sudo service flask restart
