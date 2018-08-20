@@ -16,6 +16,9 @@ Techstack for this application:
     
   Flow of the Application :
   
+      
+![alt text](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR3jm_BcnJO5kC3o0DXhiot3jLYAg6tRX5KipgP3I8TklVcgz-Z7g)
+
   
     
     
