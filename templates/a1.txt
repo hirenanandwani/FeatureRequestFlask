@@ -1,4 +1,0 @@
-position: absolute;
-left: 94%;
-top: 51%;
-float: right;
