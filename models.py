@@ -10,7 +10,9 @@ class Features(db.Model):
         Client = db.Column(db.String(10))
         ProductArea = db.Column(db.String(20))
         Priority = db.Column(db.Integer)
-        TargetDate = db.Column(db.String(30))
+        
+	#TargetDate = db.Column(db.String(30))
+	TargetDate = db.Column(db.Date)
 
 
 db.create_all()

@@ -1,0 +1,216 @@
+body
+{
+background-image: url('britecore2.jpg');
+background-repeat: no-repeat;
+background-attachment: fixed;
+background-size: 1500px;
+}
+.panel-heading
+{
+margin-top:20px;
+margin-bottom:20px;
+font-size: 20px;
+border-bottom: solid;
+border-color: lightgrey;
+text-align: center;
+/*padding: 20px;*/
+
+}
+
+.container
+{
+
+margin-top: 1%;
+border-style: solid;
+border-radius: 25px;
+border-color: lightgrey; 
+
+}
+
+
+.wrapper
+{
+background-color: rgba(0,0,0,0.6);
+position: relative;
+margin: 0 auto;	
+}
+
+.main-heading
+{
+position: relative;
+display: block;
+}
+
+.main-heading ::before
+{
+font-weight: bold;
+color: white;
+font-size: 30px;
+content: "";
+position: absolute;
+top: 50%;
+width: 48%;
+height: 1px;
+background: #d4d4d4;
+
+}
+
+.heading
+{
+
+color: #e5f2f2;
+/*font-weight: bold;*/
+font-size: 18px;
+
+}
+
+#feature-list
+{
+position: relative;
+}
+
+.feature-title
+{
+float: left;
+width: 40%;
+border: 3px solid lightgrey;
+
+}
+
+
+.feature-tdate
+{
+float: left;
+width: 30%;
+border-top: 3px solid lightgrey;
+border-right: 3px solid lightgrey;
+border-bottom: 3px solid lightgrey;
+
+}
+
+
+.feature-priority
+{
+float: left;
+width: 30%;
+border-top: 3px solid lightgrey;
+border-right: 3px solid lightgrey;
+border-bottom: 3px solid lightgrey;
+}
+
+
+.title
+{
+
+float: left;
+width: 40%;
+border-left: 3px solid lightgrey;
+border-right: 3px solid lightgrey;
+border-bottom: 3px solid lightgrey;
+
+}
+
+.tdate
+{
+
+float: left;
+width: 30%;
+/*border-left: 5px solid lightgrey;*/
+border-right: 3px solid lightgrey;
+border-bottom: 3px solid lightgrey;
+
+}
+
+.priority
+{
+
+float: left;
+width: 30%;
+/*border-left: 5px solid lightgrey;*/
+border-right: 3px solid lightgrey;
+border-bottom: 3px solid lightgrey;
+
+
+}
+
+.no-feature
+{
+width: 100%;
+border: 3px solid lightgrey;
+background-color: lightgrey;
+font-size: 15px;
+border-radius: 5px;
+padding: 5px;
+}
+
+.um-field-error {
+	/*display: none;*/
+	width: auto;
+    max-width: 100%;
+    background: #C74A4A;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    color: #fff;
+    box-sizing: border-box;
+    position: relative;
+    padding: 12px;
+    font-size: 14px;
+    line-height: 20px!important;
+    margin: 12px 0 0;
+}
+
+.um-field-arrow {
+    top: -17px;
+    left: 10px;
+    position: absolute;
+    z-index: 900;
+    /*color: #C74A4A;*/
+    color: lightgrey;
+    font-size: 28px;
+    line-height: 1em!important;
+}
+
+.um-faicon-caret-up:before {
+    content: "\f0d8";
+}
+
+[class*=" um-faicon-"]:before, [class^=um-faicon-]:before {
+    font-family: FontAwesome!important;
+    font-style: normal!important;
+    font-weight: 400!important;
+    font-variant: normal!important;
+    text-transform: none!important;
+    /*speak: none;*/
+    line-height: 1;
+    /*-webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;*/
+}
+
+.um-arrow i
+{
+
+position: absolute;
+left: 45%;
+top: -36px;
+font-size: 40px;
+color: lightgrey;
+
+}
+
+#save
+{
+
+width:50%;
+margin-bottom: 15px;
+
+}
+
+#reset
+{
+width: 49%;
+margin-bottom: 15px;
+}
+
+
+

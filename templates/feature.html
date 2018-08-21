@@ -5,7 +5,18 @@
       
         <meta charset="utf-8" />  
         <meta http-equiv="X-UA-Compatible" content="IE=edge">  
-        <meta name="viewport" content="width=device-width, initial-scale=1">  
+	
+
+
+        <!--<meta name="viewport" content="width=device-width, height=device-height,  initial-scale=1.0"/>-->
+
+
+	<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=medium-dpi" />
+
+<!--	<meta name="viewport" content="initial-scale=1.0, width=device-width, height=device-height, target-densitydpi=medium-dpi" />-->
+
+
+	<!--<meta name="viewport" content="width=device-width, initial-scale=1" />-->
         <!--CSS-->  
 	<link rel ="stylesheet" href="{{ url_for('static', filename='css/style.css') }}"/> 
         <link href="../static/css/bootstrap.min.css" rel="stylesheet" />  
@@ -32,27 +43,6 @@
     </head>  
     <body>  
       
-        <!--<nav class="navbar navbar-default navbar-fixed-top">  
-      
-            <div class="container-fluid">  
-      
-                <div class="navbar-header">  
-                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">  
-                        <span class="sr-only">Toggle navigation</span>  
-                        <span class="icon-bar"></span>  
-                        <span class="icon-bar"></span>  
-                        <span class="icon-bar"></span>  
-                    </button>  
-                    <a class="navbar-brand" href="#">Feature Request App</a>  
-                </div> 
-		
-      
-            </div> 
-      
-        </nav>-->
-	
-	<!-- END NAV-->  
-      
         <div class="container">  
       
             <div class="row">  
@@ -62,7 +52,7 @@
                     <div class="panel panel-default">  
       
                         <div class="panel-heading">  
-                            <b>FEATURE REQUEST APP</b>  
+                            <b class="main-heading">FEATURE REQUEST APP</b>  
                         </div> <!-- END HEADING-->  
       
                         <div class="panel-body">  
@@ -70,75 +60,75 @@
                             <form>  
       
                                 <div class="form-group">  
-                                    <label for="Title">Title</label>  
+                                    <label for="Title" class="heading">TITLE</label>  
                                     <input type="text" id="Title" class="form-control" data-bind="value:Title" placeholder="Title" />  
-                                </div><!-- END FIRST NAME -->  
+                                </div>
+
+				<!-- END Title -->  
 
 				 <div class="form-group">  
-                                    <label for="Description">Description</label>  
-                                    <input type="text" id="Description" class="form-control"data-bind="value:Description" placeholder="Description" />  
-                                </div><!-- END Address -->  
-
+                                    <label for="Description" class="heading">DESCRIPTION</label>  
+                                    <textarea id="Description" rows="1" class="form-control"data-bind="value:Description" placeholder="Description"></textarea>  
+                                </div>
+		
+				<!-- END Description -->  
       
                                 <div class="form-group">  
-                                    <label for="Client">Client</label>  
+                                    <label for="Client" class="heading">CLIENT</label>  
                                     <select class="form-control" id = "Clientlist" data-bind="options: ClientList, value: Client, optionsCaption:'Choose Client......'"></select>  
-                                </div> <!-- END COUNTRY -->  
+                                </div> 
+
+				<!-- END Client List -->  
 
 				<div class="form-group" id="feature-list" style="border: thin;display:none">
-					
-					<!--<div style="" id="heading">
-						<div style="float:left; border:5px solid lightgrey; width:50%">Title</div>
-						<div style="float:left; border:5px solid lightgrey; width:50%">Priority</div>
-						<div style=" border:solid;">Hello</div>
-					</div>
-		
-					<div style="">
-                                                <div style="float:left; border:solid; width: 33%">Hello</div>
-                                                <div style="float:left; border:solid; width: 33%">Hello</div>
-                                                <div style="border:solid">Hello</div>
-                                        </div>-->
-                                        <!--<div class="um-arrow"> <i class="um-faicon-caret-up"></i></div>-->      
-
+				
 
 				</div>
 
-				<!--<div> <i class="um-faicon-caret-up"></i></div>-->
-
-				<!--<div class="um-field-error" id="categoryError">
-                                	<span class="um-field-arrow" style="float:left">
-                                        	<i class="um-faicon-caret-up"></i>
-                                       </span>
-                                        <span>Enter Category</span>
-				</div>-->
+				<!-- END Feature List -->
         
-
       
                                 <div class="form-group">  	
-                                    <label for="Password" id="label_prio">Client Priority</label>  
+                                    <label for="Priority" id="label_prio" class="heading">CLIENT PRIORITY</label>  
                                     <input type="text" id="Priority" class="form-control" data-bind="value:Priority" placeholder="Priority" />  
-                                </div><!-- END Password -->  
+                                </div>
 
-				<div class="form-group input-append date">
-                                    <label for="TargetDate">Target Date</label>
-                                    <input type="text" id="TargetDate" class="form-control date-picker" data-bind="value:TargetDate" placeholder="Target Date" />
-				    <span class="add-on"><i class="icon-calendar" id="cal2">
-                                </div><!-- END Address -->
+				<!-- END Priority -->  
+
+				<!--<div class="form-group input-append date input-group">
+                                    <label for="TargetDate" class="heading">TARGET DATE</label>
+                                     <div class="input-group">
+                                        <input type="text" id="TargetDate" class="form-control date-picker" data-bind="value:TargetDate" placeholder="Target Date" />
+                                        <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+                                     </div>
+
+                                </div>-->
 
 
-				<!--<div class="input-group input-append date" id="dateRangePicker">
-                			<label>Date of Birth</label>
-                			<input type="text" class="form-control date-input" id="date-fld1" name="date" />
-					<span class="input-group-addon add-on"><span class="glyphicon glyphicon-calender"></span></span>	
-            			</div>-->
+				<!-- END Target Date -->
+
+				<div class="form-group input-append date" id="calendate">
+				    <div>
+                                    	<label for="TargetDate" class="heading">TARGET DATE</label>
+				    </div>
+                                    <div id="calen-input">
+                                        <input type="text" id="TargetDate" class="form-control date-picker" data-bind="value:TargetDate" placeholder="Target Date" />
+                                    </div>
+				    <div class="input-group" id="calendar">
+                                        	<span class="input-group-addon" id="calen-font"><i class="fa fa-calendar icon"></i></span>
+
+				    </div>
+
+                                </div>
 
 
 
 				<div class="form-group">
-                                    <label for="ProductArea">Product Area</label>
+                                    <label for="ProductArea" class="heading">PRODUCT AREA</label>
                                      <select class="form-control" id="ProductArea" data-bind="options: ProductAreaList, value: Product, optionsCaption:'Choose Product Area.....'"></select>
-                                </div> <!-- END COUNTRY -->
+                                </div> 
 
+				<!-- END Product Area -->
 
       
                                 <button type="button" class="btn btn-success" data-bind="click:submit" id="save">  
@@ -171,218 +161,13 @@
         <script src= "../static/js/bootstrap.min.js"></script> 
         <!--KnockOutJs librairies-->  
         <script src="../static/js/knockout.min.js"></script>  
+	<!-- Feature Request App JS File -->
+	<script src= "../static/js/feature-plugin.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/knockout-validation/2.0.3/knockout.validation.min.js"></script>  
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/js/bootstrap-datepicker.min.js"></script>
 	<!--<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.0.0/js/bootstrap-datetimepicker.min.js"></script>-->
       
       
-        <script type="text/javascript">  
-      
-            $(document).ready(function(){  
-              
-                
-      
-                ko.validation.init({  
-      
-                    registerExtenders: true,  
-                    messagesOnModified: true,  
-                    insertMessages: true,  
-                    parseInputAttributes: true,  
-                    errorClass:'errorStyle',  
-                    messageTemplate: null  
-      
-                }, true);  
-      
-    
-                var viewModel ={  
-      
-                    //var self = this;  
-      
-                    Title: ko.observable().extend({ required: true, minLength: 2, maxLength:17}),  
-		    Description: ko.observable().extend({required : true}),
-	            Priority: ko.observable().extend({ required: true }),
-                    ClientList: ko.observableArray(['Client A','Client B','Client C']),  
-                    Client: ko.observable().extend({ required: true}),  
-	            ProductAreaList: ko.observableArray(['Policies','Billing','Claim']),  
-                    Product: ko.observable().extend({ required: true}), 		  
-		    TargetDate: ko.observable().extend({required: true}),
-                    Priority: ko.observable().extend({ required: true }),  
-             
-
-                    submit : function(){  
-                        $('div.alert-success').hide();  
-                        $('div.alert-danger').hide();  
-                        if(viewModel.errors().length === 0){  
-                            //alert('Thank you');  
-                            $('div.alert-success').show();  
-                        }else{  
-                            //alert('Please check your submission');  
-			    
-                            $('div.alert-danger').show();  
-                        }  
-                          
-                    }  
-                      
-      
-                };  
-      
-               //Catch errors  
-                viewModel.errors = ko.validation.group(viewModel);  
-                ko.applyBindings(viewModel);  
-
-		/*viewModel.submit = function()
-		{
-			alert();
-    			var result = ko.validation.group(viewModel, {deep: true});
-    			if (result().length >  0) 
-    			{
-        			alert("Please fix all errors before preceding");
-        			result.showAllMessages(true);
-
-        			return false;
-    			}
-
-    			//actually save stuff, call ajax, submit form, etc
-		}*/
-
-		
-		var container=$('.bootstrap-iso form').length>0 ? $('.bootstrap-iso form').parent() : "body";
-		/*$('.date-input').datepicker({
-
-			format: "mm/dd/yy",
-			container, container,
-			autoclose: true,
-			orientation: "top-right",
-			todayHighlight: true
-
-		});*/
-
-
-		$('.date-picker').datepicker({
-
-
-                        format: "mm/dd/yy",
-                        container, container,
-                        autoclose: true,
-                        orientation: "top-right",
-                        todayHighlight: true
-
-                });
-
-
-		//$('.date-input').datetimepicker();
-
-		$('#save').click(function(){
-			
-			var result = ko.validation.group(viewModel, {deep: true});
-			if (result().length >  0) 
-                        {
-                                alert("Please fix all errors before preceding");
-                                result.showAllMessages(true);
-
-                                return false;
-                        }
-
-
-			$.ajax({
-            			url: '/regions',
-            			async: true,
-            			cache: false,
-            			type: 'POST',
-            			data: ko.toJSON(viewModel),
-            			contentType: 'application/json',
-            			success: function (result) {
-            					alert("Recorded inserted Sucessfully");
-						$('#feature-list').html("");
-						$('#Clientlist').val('');
-						$('#Title').val('');
-						$('#Description').val('');
-						$('#Priority').val('');
-						$('#TargetDate').val('');
-						$('#ProductArea').val('');
-
-           
-            				}
-        		});
-
-
-			alert("Button Clicked");
-		
-		});
-
-		$('#reset').click(function(){
-
-			var result = ko.validation.group(viewModel, {deep: true});
-			result.showAllMessages(false);
-
-			$('div.alert-danger').hide(); 
-			$('#feature-list').html("");
-                        $('#Clientlist').val('');
-                        $('#Title').val('');
-                        $('#Description').val('');
-                        $('#Priority').val('');
-                        $('#TargetDate').val('');
-                        $('#ProductArea').val('');
-
-		});
-
-		$('#Clientlist').on('change', function() {
-			
-			$('#feature-list').html('');
-			if($('select').val() != '')
-			{
-  				alert(this.value);
-				var data = {'client' : this.value}
-				//formData.append('Client',this.value);
-				$.ajax({
-                                	url: '/clientFeatures',
-                                	async: true,
-                                	cache: false,
-                                	type: 'POST',
-                                	//data: ko.toJSON(viewModel),
-					data: JSON.stringify(data),
-					processData: false,
-                                	contentType: 'application/json',
-                                	success: function(result) {
-							
-							
-							//alert("Hello");
-							if(result['features'].length != 0)
-							{
-								alert("Hello");
-								alert(JSON.stringify(result['features'][0].Title));
-                                                        	$('#feature-list').show();
-                                                        	html = $("<div class='feature-row' style=''>").append("<div class='feature-title'>Title</div><div class='feature-tdate'>									Target Date</div><div class='feature-priority'>Priority</div><div class='um-arrow'><i class='um-faicon-caret-up'></i></div>")
-                                                        	$('#feature-list').append(html);
-                                                        	result['features'].forEach(function(entry) {
-                        
-                                                                	alert(entry.Title);
-                                                                	html = $("<div class='feature-row'>").append("<div class='title'>"+entry.Title+"</div><div class='tdate'>"+entry										.TargetDate+"</div><div class='priority'>"+entry.Priority+"</div>");
-                                                                	$("#feature-list").append(html);                                                							       $("#label_prio").css({"margin-top":"10px"});
-
-                                                        	});
-
-							}
-							else
-							{
-
-								$('#feature-list').show();
-								$('#feature-list').append('<div class="no-feature">'+data["client"]+' do not have any feature entry in database</div><div class="um-arrow"><i class="um-faicon-caret-up"></i></div>');
-
-							}
-
-                                        	}
-                        	});
-				
-			}
-		});
-		
-      
-      
-            });    
-      
-        </script>  
-      
-      
-    </body>  
-    </html>   
+        
+   </body>  
+</html>   
