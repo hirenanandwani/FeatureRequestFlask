@@ -2,7 +2,6 @@
 
 This is a Feature Request APP for a product in insurance industry. It is a web application to add and manage a new features requested by the client.
 
-
 Techstack for this application:
 
 
