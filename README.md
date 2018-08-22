@@ -20,6 +20,8 @@ Techstack for this application:
     FeatureRequestApp - Contains Whole Application Code
     static - Contains sub directories (1)css (2)js
     templates - HTMTL Templates
+    script - Contains shell script files for doing installation and configuration on AWS server. It will be used by AWS CodeDeploy 
+             agent through appsec.yml
     
   Files -
   
