@@ -66,6 +66,7 @@
                         {
                                 alert("Please fix all errors before preceding");
                                 result.showAllMessages(true);
+				$('#calendar').css('margin-bottom','33px');
 
                                 return false;
                         }
@@ -89,19 +90,16 @@
 						$('#ProductArea').val('');
 
           				},
-					error: function(response) {
+					error: function(xhr, status, error) {
 						 $('div.alert-success').hide();
-						//$('div.alert-danger').html(result['error']);
-						//alert(JSON.stringify(response[0]));
-						//alert($.parseJSON(response).msg);
-						alert("Priority Should be Greater tha Zero");
+						var json = JSON.parse(xhr.responseText);
+						alert(json['error']);
 						$('div.alert-danger').show();
 
 					}
         		  });
 
 
-			alert("Button Clicked");
 		
 		});
 
@@ -126,7 +124,6 @@
 			$('#feature-list').html('');
 			if($('select').val() != '')
 			{
-  				alert(this.value);
 				var data = {'client' : this.value}
 				$.ajax({
                                 	url: '/clientFeatures',
@@ -140,17 +137,14 @@
                                 	success: function(result) {
 							
 							
-							//alert("Hello");
 							if(result['features'].length != 0)
 							{
-								alert("Hello");
-								alert(JSON.stringify(result['features'][0].Title));
                                                         	$('#feature-list').show();
                                                         	html = $("<div class='feature-row' style=''>").append("<div class='feature-title'>Title</div><div class='feature-tdate'>									Target Date</div><div class='feature-priority'>Priority</div><div class='um-arrow'><i class='um-faicon-caret-up'></i></div>")
                                                         	$('#feature-list').append(html);
                                                         	result['features'].forEach(function(entry) {
                         
-                                                                	alert(entry.Title);
+                                                    
                                                                 	html = $("<div class='feature-row'>").append("<div class='title'>"+entry.Title+"</div><div class='tdate'>"+entry										.TargetDate+"</div><div class='priority'>"+entry.Priority+"</div>");
                                                                 	$("#feature-list").append(html);                                                							       $("#label_prio").css({"margin-top":"10px"});
 

@@ -5,24 +5,15 @@
       
         <meta charset="utf-8" />  
         <meta http-equiv="X-UA-Compatible" content="IE=edge">  
-	
 
-
-        <!--<meta name="viewport" content="width=device-width, height=device-height,  initial-scale=1.0"/>-->
 
 
 	<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=medium-dpi" />
 
-<!--	<meta name="viewport" content="initial-scale=1.0, width=device-width, height=device-height, target-densitydpi=medium-dpi" />-->
-
-
-	<!--<meta name="viewport" content="width=device-width, initial-scale=1" />-->
         <!--CSS-->  
 	<link rel ="stylesheet" href="{{ url_for('static', filename='css/style.css') }}"/> 
         <link href="../static/css/bootstrap.min.css" rel="stylesheet" />  
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker3.css"/>
-	<!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker.css"/>-->
-	<!--<link rel="stylesheet" href="http://cdn.rawgit.com/Eonasdan/bootstrap-datetimepicker/a549aa8780dbda16f6cff545aeabc3d71073911e/build/css/bootstrap-datetimepicker.css"/>-->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.0.0/css/bootstrap-datetimepicker.css"/>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.0.0/css/bootstrap-datetimepicker.min.css"/>
 	<link href='//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css' rel='stylesheet'/>
@@ -58,27 +49,36 @@
                         <div class="panel-body">  
       
                             <form>  
+				<!-- Start Title -->
       
                                 <div class="form-group">  
-                                    <label for="Title" class="heading">TITLE</label>  
-                                    <input type="text" id="Title" class="form-control" data-bind="value:Title" placeholder="Title" />  
+                                    <label for="Title" class="heading">TITLE</label> 
+                                    <input type="text" id="Title" class="form-control input-field" data-bind="value:Title" placeholder="Enter Feature Title" />  
                                 </div>
 
 				<!-- END Title -->  
 
+			
+				<!-- Start Description -->
+
 				 <div class="form-group">  
                                     <label for="Description" class="heading">DESCRIPTION</label>  
-                                    <textarea id="Description" rows="1" class="form-control"data-bind="value:Description" placeholder="Description"></textarea>  
+                                    <textarea id="Description" rows="1" class="form-control tarea-field"data-bind="value:Description" placeholder="Enter Feature Description"></textarea>  
                                 </div>
 		
 				<!-- END Description -->  
+
+
+				<!-- Start Client List -->
       
                                 <div class="form-group">  
                                     <label for="Client" class="heading">CLIENT</label>  
-                                    <select class="form-control" id = "Clientlist" data-bind="options: ClientList, value: Client, optionsCaption:'Choose Client......'"></select>  
+                                    <select class="form-control select-list" id = "Clientlist" data-bind="options: ClientList, value: Client, optionsCaption:'Choose client......'"></select>  
                                 </div> 
 
 				<!-- END Client List -->  
+
+				<!-- Start Feature List -->
 
 				<div class="form-group" id="feature-list" style="border: thin;display:none">
 				
@@ -86,46 +86,41 @@
 				</div>
 
 				<!-- END Feature List -->
+
+
+				<!-- Start Client Priority -->
         
       
                                 <div class="form-group">  	
                                     <label for="Priority" id="label_prio" class="heading">CLIENT PRIORITY</label>  
-                                    <input type="text" id="Priority" class="form-control" data-bind="value:Priority" placeholder="Priority" />  
+                                    <input type="text" id="Priority" class="form-control input-filed" data-bind="value:Priority" placeholder="Enter Feature Priority" />  
                                 </div>
 
-				<!-- END Priority -->  
-
-				<!--<div class="form-group input-append date input-group">
-                                    <label for="TargetDate" class="heading">TARGET DATE</label>
-                                     <div class="input-group">
-                                        <input type="text" id="TargetDate" class="form-control date-picker" data-bind="value:TargetDate" placeholder="Target Date" />
-                                        <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
-                                     </div>
-
-                                </div>-->
+				<!-- End Client Priority -->
 
 
-				<!-- END Target Date -->
 
-				<div class="form-group input-append date" id="calendate">
-				    <div>
-                                    	<label for="TargetDate" class="heading">TARGET DATE</label>
-				    </div>
-                                    <div id="calen-input">
-                                        <input type="text" id="TargetDate" class="form-control date-picker" data-bind="value:TargetDate" placeholder="Target Date" />
-                                    </div>
-				    <div class="input-group" id="calendar">
-                                        	<span class="input-group-addon" id="calen-font"><i class="fa fa-calendar icon"></i></span>
+				<!-- Start Target Date -->
 
-				    </div>
+				<div class="form-group input-append date" id="calendar">
+
+					<label for="TargetDate">TARGET DATE</label>
+                                        <div class="input-group">
+                                        	<input type="text" id="TargetDate" class="form-control date-picker input-filed" data-bind="value:TargetDate" placeholder="Enter Target Date" />
+                                        	<span class="input-group-addon calen-span"><i class="fa fa-calendar"></i></span>
+                                  	</div>
 
                                 </div>
 
+				<!-- End Target Date -->
+
+
+				<!-- Start Product Area -->
 
 
 				<div class="form-group">
                                     <label for="ProductArea" class="heading">PRODUCT AREA</label>
-                                     <select class="form-control" id="ProductArea" data-bind="options: ProductAreaList, value: Product, optionsCaption:'Choose Product Area.....'"></select>
+                                     <select class="form-control select-list" id="ProductArea" data-bind="options: ProductAreaList, value: Product, optionsCaption:'Choose Product Area.....'"></select>
                                 </div> 
 
 				<!-- END Product Area -->
@@ -165,9 +160,8 @@
 	<script src= "../static/js/feature-plugin.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/knockout-validation/2.0.3/knockout.validation.min.js"></script>  
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/js/bootstrap-datepicker.min.js"></script>
-	<!--<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.0.0/js/bootstrap-datetimepicker.min.js"></script>-->
-      
-      
+
+    
         
    </body>  
 </html>   

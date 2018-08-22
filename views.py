@@ -20,10 +20,9 @@ def region():
 	
 	content = request.get_json(silent=True)
 
-
 	### Cheking For Invalid Priority
 	if int(content['Priority']) <= 0:
-		return json.dumps({ "error": "Priority Should be Greater than Zero" }), 500
+		return jsonify({'error':'Wrong Priority'}), 500
 		
 
 	check_database_empty = Features.query.filter_by(Client=str(content['Client'])).first()
@@ -31,14 +30,13 @@ def region():
 
 
 	new_date = datetime.strptime(str(content['TargetDate']), '%y-%m-%d').date()
-	print new_date
 
 
 	#### User should enter new unique priority in sequence
 
 	""" 
 			For example. If we have 1 to 10 Priority in databases 
-			thenuser should enter priority no 1 to 11. Not after 11.
+			then user should enter priority no 1 to 11. Not after 11.
 
 			Same, For entering new unique priority, User should 
 			enter date greater than the date of highest priority
@@ -56,21 +54,17 @@ def region():
 		max_priority = Features.query.filter_by(Client=str(content['Client'])).order_by(desc(Features.Priority)).first()
 
 		if int(content['Priority']) != int(max_priority.Priority)+1:
-			return json.dumps({ "error": "Next Feature Priority Should be "+str(int(max_priority.Priority +1)) }), 500
+			return jsonify({ "error": "Next Feature Priority Should be "+str(int(max_priority.Priority +1)) }), 500
+
 
 		last_date = Features.query.filter_by(Client=str(content['Client'])).order_by(desc(Features.id)).first()
-		#last_date = datetime.strptime(str(last_date.TargetDate), '%m-%d-%y').date()
-		print last_date.TargetDate
-		#last_date = datetime.strptime(str(last_date.TargetDate), '%y-%m-%d').date()
 		last_date = last_date.TargetDate
-		#print last_date
 		
 
 	#### Checking if user have entered proper date for unique priorityif not, it will throw 500 withh error message ###
 		if new_date < last_date:
-			 print "Entered Again"
-		    	 print last_date 
-			 return json.dumps({ "error": "Date should be equal or after "+ str(last_date)+ "for"+ str(max_priority.Priority)}), 500		
+			 return jsonify({ "error": "Date should be equal or after -  "+str(last_date)+ " for entered priority"}), 500
+
 
 	new_date = datetime.strptime(str(content['TargetDate']), '%y-%m-%d').date()
 
@@ -123,6 +117,8 @@ def region():
 
 @app.route('/clientFeatures', methods=['POST','GET'])
 def clientFeature():
+
+	### Will give the existing feature details for specific client when any client is selected from selection list  ###
 	content = request.get_json(silent=True)	
 	temp_feature = Features.query.filter_by(Client=str(content['client'])).order_by(Features.Priority)
 	output = []
