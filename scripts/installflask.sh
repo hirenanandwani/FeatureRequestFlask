@@ -18,6 +18,6 @@ yes | pip install Flask
 yes | sudo apt-get install python-flask-sqlalchemy
 
 cd /home/ubuntu/flaskapp
-rm *
+rm -rf *
 #sqlite3 features.db
 
