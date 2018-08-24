@@ -33,6 +33,7 @@
                         $('div.alert-danger').hide();  
                         if(viewModel.errors().length === 0){  
                             $('div.alert-success').show();  
+			    $('div.alert-success').delay(6000).fadeOut('slow');
                         }else{  
                    	    
                             $('div.alert-danger').show();  
