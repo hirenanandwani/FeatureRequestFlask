@@ -1,4 +1,4 @@
-##################################### BriteCore Feature Request Application #######################################
+####################### BriteCore Feature Request Application #####################
 
 # FeatureRequestFlask
 
