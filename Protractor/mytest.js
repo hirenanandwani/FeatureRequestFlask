@@ -225,6 +225,10 @@ describe("My Eighth Test",function(){
 		element(by.id('ProductArea')).$('[value="Claim"]').click();
 		
 		register.click();
+		browser.driver.sleep(2000);
+
+		browser.switchTo().alert().accept();
+		
 		
 		expect(element(by.className('alert-success')).isDisplayed()).toBeTruthy();
 		reset.click();
