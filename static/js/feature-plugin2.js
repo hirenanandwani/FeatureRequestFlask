@@ -73,7 +73,7 @@
 
 
 			$.ajax({
-            			url: 'http://18.191.134.99:5000/regions',
+            			url: '/regions',
             			async: true,
             			cache: false,
             			type: 'POST',
@@ -126,7 +126,7 @@
 			{
 				var data = {'client' : this.value}
 				$.ajax({
-                                	url: 'http://18.191.134.99:5000/clientFeatures',
+                                	url: '/clientFeatures',
                                 	async: true,
                                 	cache: false,
                                 	type: 'POST',
