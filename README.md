@@ -14,29 +14,23 @@ Techstack for this application:
     Continious Integration Tool : Jenkins
     Automated Deployment Platform : AWS Code Deploy with EC2
     
-    
-  Flow of the Application :
-  
-      
-![alt text](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR3jm_BcnJO5kC3o0DXhiot3jLYAg6tRX5KipgP3I8TklVcgz-Z7g)
-
-  
-    
-    
-  File Description - 
   
   Directories -
   
     FeatureRequestApp - Contains Whole Application Code
     static - Contains sub directories (1)css (2)js
     templates - HTMTL Templates
+    script - Contains shell script files for doing installation and configuration on AWS server. It will be used by AWS CodeDeploy 
+             agent through appsec.yml
     
   Files -
   
-    featuresapp.py - Flask app which will start Flask Server
+    flaskapp.py - Flask app which will start Flask Server
     feature-test.py - Python file which contains test case to be tested on Jenkins Server
     views.py - Contains routes for the Flask Application
     models.py - ORM - Sqlalchmey Model for Flask Application
-    
+    appsec.yml  - Configuration file which is read by AWS Code Deploy Agent to do before installation, installation and after
+              installation steps and other configuration steps to be followed at EC2 instances.
+     
   
   
