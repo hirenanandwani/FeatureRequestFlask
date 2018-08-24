@@ -1,7 +1,10 @@
+
 describe("My First Test",function(){
 	
 	var register = element(by.css('#save'));
 	var reset = element(by.css('#reset'));
+	
+
 	
 
 	it("To Test Output2",function(){
@@ -14,10 +17,14 @@ describe("My First Test",function(){
 		element(by.id('ProductArea')).$('[value="Claim"]').click();
 
 		register.click();
+		browser.switchTo().alert().accept();
 
 		expect(element(by.className('alert-danger')).isDisplayed()).toBeTruthy();	
-		browser.driver.sleep(3000);
+		//browser.driver.sleep(3000);
+
 		reset.click();
+
+;
 
 
 
@@ -38,12 +45,13 @@ describe("My First Test1",function(){
 	it("To Test Output1",function(){
 		browser.ignoreSynchronization = true;
 		browser.get("http://localhost:5000");	
+		browser.driver.findElement(by.id('Title')).sendKeys('csknsnsmn');
 		element(by.id('Clientlist')).$('[value="Client A"]').click();
 		browser.driver.findElement(by.id('Priority')).sendKeys('1');
 		browser.driver.findElement(by.id('TargetDate')).sendKeys('18-8-28');
 		element(by.id('ProductArea')).$('[value="Claim"]').click();
-
 		register.click();
+		browser.switchTo().alert().accept();
 		expect(element(by.className('alert-danger')).isDisplayed()).toBeTruthy();
 		reset.click();
 	
@@ -74,7 +82,7 @@ describe("My Third Test",function(){
 		browser.driver.findElement(by.id('TargetDate')).sendKeys('18-8-28');
 		element(by.id('ProductArea')).$('[value="Claim"]').click();
 		register.click();
-
+		browser.switchTo().alert().accept();
 		expect(element(by.className('alert-danger')).isDisplayed()).toBeTruthy();
 		reset.click();
 
@@ -102,6 +110,7 @@ describe("My Fourth Test",function(){
 		browser.driver.findElement(by.id('TargetDate')).sendKeys('18-8-28');
 		element(by.id('ProductArea')).$('[value="Claim"]').click();
 		register.click();
+		browser.switchTo().alert().accept();
 		expect(element(by.className('alert-danger')).isDisplayed()).toBeTruthy();
 		reset.click();
 
@@ -129,7 +138,7 @@ describe("My Fifth Test",function(){
 		browser.driver.findElement(by.id('Priority')).sendKeys('1');
 		element(by.id('ProductArea')).$('[value="Claim"]').click();
 		register.click();
-
+		browser.switchTo().alert().accept();
 	
 		expect(element(by.className('alert-danger')).isDisplayed()).toBeTruthy();
 		reset.click();
@@ -162,8 +171,8 @@ describe("My Sixth Test",function(){
 		browser.driver.findElement(by.id('TargetDate')).sendKeys('18-8-28');
 
 		register.click();
+		browser.switchTo().alert().accept();
 
-	
 		expect(element(by.className('alert-danger')).isDisplayed()).toBeTruthy();
 		reset.click();
 
@@ -186,6 +195,7 @@ describe("My Seventh Test",function(){
 		browser.ignoreSynchronization = true;
 		browser.get("http://localhost:5000");	
 		register.click();
+		browser.switchTo().alert().accept();
 		expect(element(by.className('alert-danger')).isDisplayed()).toBeTruthy();
 		reset.click();
 
@@ -215,6 +225,7 @@ describe("My Eighth Test",function(){
 		element(by.id('ProductArea')).$('[value="Claim"]').click();
 		
 		register.click();
+		
 		expect(element(by.className('alert-success')).isDisplayed()).toBeTruthy();
 		reset.click();
 
