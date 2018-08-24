@@ -64,7 +64,7 @@
 			var result = ko.validation.group(viewModel, {deep: true});
 			if (result().length >  0) 
                         {
-                                alert("Please fix all errors before preceding");
+                                //alert("Please fix all errors before preceding");
                                 result.showAllMessages(true);
 				$('#calendar').css('margin-bottom','33px');
 
@@ -80,7 +80,7 @@
             			data: ko.toJSON(viewModel),
             			contentType: 'application/json',
             			success: function (result) {
-            					alert("Recorded inserted Sucessfully");
+            					//alert("Recorded inserted Sucessfully");
 						$('#feature-list').html("");
 						$('#Clientlist').val('');
 						$('#Title').val('');
@@ -93,7 +93,7 @@
 					error: function(xhr, status, error) {
 						 $('div.alert-success').hide();
 						var json = JSON.parse(xhr.responseText);
-						alert(json['error']);
+						//alert(json['error']);
 						$('div.alert-danger').show();
 
 					}
