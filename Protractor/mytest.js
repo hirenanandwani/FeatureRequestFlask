@@ -36,7 +36,6 @@ describe("My First Test1",function(){
 	
 
 	it("To Test Output1",function(){
-:		
 		browser.ignoreSynchronization = true;
 		browser.get("http://localhost:5000");	
 		element(by.id('Clientlist')).$('[value="Client A"]').click();
