@@ -7,7 +7,7 @@ exports.config = {
   capabilities: {
     'browserName': 'chrome',
     'chromeOptions': {
-        'args': ['--disable-web-security',  'disable-extensions', 'start-maximized', 'lang=en-EN', '--enable-single-click-autofill', '--dom-automation', '--enable-automation', '--headless' ,'no-sandbox'],
+        'args': ['--disable-web-security',  'disable-extensions', 'start-maximized', 'lang=en-EN', '--enable-single-click-autofill', '--dom-automation', '--enable-automation','no-sandbox'],
 
         prefs: {
             'credentials_enable_service': false,

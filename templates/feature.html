@@ -93,7 +93,7 @@
       
                                 <div class="form-group">  	
                                     <label for="Priority" id="label_prio" class="heading">CLIENT PRIORITY</label>  
-                                    <input type="text" id="Priority" class="form-control input-filed" data-bind="value:Priority" placeholder="Enter Feature Priority" />  
+                                    <input type="text" id="Priority" class="form-control input-filed" data-bind="numeric, value:Priority" placeholder="Enter Feature Priority" />  
                                 </div>
 
 				<!-- End Client Priority -->
@@ -104,7 +104,7 @@
 
 				<div class="form-group input-append date" id="calendar">
 
-					<label for="TargetDate">TARGET DATE</label>
+					<label for="TargetDate" class="heading">TARGET DATE</label>
                                         <div class="input-group">
                                         	<input type="text" id="TargetDate" class="form-control date-picker input-filed" data-bind="value:TargetDate" placeholder="Enter Target Date" />
                                         	<span class="input-group-addon calen-span"><i class="fa fa-calendar"></i></span>

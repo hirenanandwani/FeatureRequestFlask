@@ -19,7 +19,7 @@ body::before
 	height: 100%;
 	position: fixed;
 	/*background-image: url('BriteCoreNew.jpg');*/
-	background-image: url('BriteCore_4.png');
+	background-image: url('BriteCore_2.png');
 	/*background-image: url('BriteCoreUpdated_1.png'); */
 	overflow-x: hidden;
 	background-repeat: no-repeat;
@@ -196,17 +196,17 @@ body::before
 
 input
 {
-	font-size: 14px !important;
+	font-size: 15px !important;
 }
 
 select
 {
-	font-size: 14px !important;
+	font-size: 15px !important;
 }
 
 textarea
 {
-        font-size: 14px !important;
+        font-size: 15px !important;
 }
 
 

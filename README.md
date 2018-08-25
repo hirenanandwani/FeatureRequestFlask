@@ -2,10 +2,7 @@
 
 # FeatureRequestFlask
 
-This is a Feature Request APP for a product in insurance industry. It is a web application to add and manage a new features requested by the client. We are ready to deploy
-
-We will be Deploying our App !!!!!!!!!!!!
-
+This is a Feature Request APP for a product in insurance industry. It is a web application to add and manage a new features requested by the client. 
 
 Techstack for this application required for this application:
 
