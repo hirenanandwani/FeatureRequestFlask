@@ -4,7 +4,7 @@
 
 This is a Feature Request APP for a product in insurance industry. It is a web application to add and manage a new features requested by the client..
 
-Techstack for this application required for this application:
+Techstack for this application:
 
 
     OS: Ubuntu 16
@@ -25,8 +25,6 @@ Techstack for this application required for this application:
   
    
     
-  File Description - 
-  
   Directories -
   
     FeatureRequestApp - Contains Whole Application Code
