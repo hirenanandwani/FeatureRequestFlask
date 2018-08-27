@@ -31,8 +31,8 @@ Techstack for this application:
     static            -   Contains sub directories (1)css (2)js
     templates         -   HTMTL Templates
     scripts           -   Contains .sh file that should be run on the time of deployment on AWS EC2.
-    Protractor        -   Protractor files for front-end testing of application (1) conf.js (2) mytest.js to be tested on  
-                          Jenkins.
+    Protractor        -   Protractor files for front-end testing of application (1) conf.js (2) mytest.js to 
+                          be tested on Jenkins.
     
   Files -
   
