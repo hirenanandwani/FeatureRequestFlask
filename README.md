@@ -27,20 +27,20 @@ Techstack for this application:
     
   Directories -
   
-    FeatureRequestApp - Contains Whole Application Code
-    static - Contains sub directories (1)css (2)js
-    templates - HTMTL Templates
-    scripts - Contains .sh file that should be run on the time of deployment on AWS EC2.
-    Protractor - protractor files for front-end testing of application (1) conf.js (2) mytest.js
+    FeatureRequestApp -   Contains Whole Application Code
+    static            -   Contains sub directories (1)css (2)js
+    templates         -   HTMTL Templates
+    scripts           -   Contains .sh file that should be run on the time of deployment on AWS EC2.
+    Protractor        -   Protractor files for front-end testing of application (1) conf.js (2) mytest.js
     
   Files -
   
-    featuresapp.py - Flask app which will start Flask Server
-    feature-test.py - Python file which contains test case to be tested on Jenkins Server
-    views.py - Contains routes for the Flask Application
-    models.py - ORM - Sqlalchmey Model for Flask Application
-    appsec.yml  - Configuration file which is read by AWS Code Deploy Agent to do before installation, installation and after
-                  installation steps and other configuration steps to be followed at EC2 instances.
+    featuresapp.py   -   Flask app which will start Flask Server
+    feature-test.py  -   Python file which contains test case to be tested on Jenkins Server
+    views.py         -   Contains routes for the Flask Application
+    models.py        -   ORM - Sqlalchmey Model for Flask Application
+    appsec.yml       -   Configuration file which is read by AWS Code Deploy Agent to do before installation, installation and
+                         after installation steps and other configuration steps to be followed at EC2 instances.
     
     
     
