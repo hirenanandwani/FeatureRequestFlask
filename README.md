@@ -41,8 +41,8 @@ Techstack for this application:
     views.py          -   Contains routes for the Flask Application
     models.py         -   ORM - Sqlalchmey Model for Flask Application
     appsec.yml        -   Configuration file which is read by AWS Code Deploy Agent to do before installation,
-                         installation and after installation steps and other configuration steps to be followed 
-                         at EC2 instances.
+                          installation and after installation steps and other configuration steps to be followed 
+                          at EC2 instances.
     
     
     
